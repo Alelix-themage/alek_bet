@@ -4,7 +4,6 @@ import banco as bc
 st.title("Aposta do Corinthians caindo")
 st.image("./assets/funeral.jpeg")
 
-st.balloons()
 
 nome = st.text_input("Nome")
 

@@ -24,12 +24,10 @@ def criarBanco():
 
     
 def inserirBanco(nome, jogo1, jogo2, jogo3, jogo4, jogo5, jogo6, jogo7):
-
-    cursor.execute(f'''
-                   INSERT INTO JOGO (NOME, CORXPAL, VITXCOR, CORXCRU, CORXVAS, CRIXCOR, CORXBH, GRXCOR) VALUES (
-                    '{nome}', '{jogo1}', '{jogo2},'{jogo3}', '{jogo4}, '{jogo5}', '{jogo6}', '{jogo7}')
-                ''')
-    
+    cursor.execute('''
+        INSERT INTO JOGO (NOME, CORXPAL, VITXCOR, CORXCRU, CORXVAS, CRIXCOR, CORXBH, GRXCOR) 
+        VALUES (?, ?, ?, ?, ?, ?, ?, ?)
+    ''', (nome, jogo1, jogo2, jogo3, jogo4, jogo5, jogo6, jogo7))
     conn.commit()
 
     
